@@ -1,0 +1,147 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login-button {
+    background-color: blue;
+    padding: 8px 5px 8px 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    border-color: white;
+    width: 100px;
+    margin-right: 10px;
+
+}
+
+.main-header {
+    font-family: 'Montez', cursive;
+    font-size: 30px;
+    color: blue;
+    margin: 0;
+}
+
+.sub-header {
+    font-family: 'Marck Script', cursive;
+    font-size: 10;
+    color: black;
+    margin: 0;
+}
+
+.loginButtons {
+    padding: 10px;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+}
+
+.modal-content-signin {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 35%;
+    margin-right: 50%;
+    padding: 20px;
+    font-weight: normal;
+    background-color: white;
+}
+
+.modal-content-signup {
+    margin-top: 75px;
+    margin-bottom: 95px;
+    margin-left: 35%;
+    margin-right: 50%;
+    padding: 20px;
+    font-weight: normal;
+    background-color: white;
+}
+
+
+.modal-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.modal-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Abel;
+}
+
+.close {
+    cursor: pointer;
+    font-size: inherit;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+input {
+    padding: 10px;
+    font-family: Abel;
+    background-color: rgb(209, 209, 209);
+    border: none;
+}
+
+.label-text {
+    margin: 10px 0px;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+
+.signup {
+    color: blue;
+    font-weight: bolder;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: Abel;
+}
+
+.bottom-banner {
+    font-family: Abel;
+    font-size: 20px;
+    padding-top: 20px;
+    display: flex;
+    align-content: center;
+
+}
+
+.greenButton {
+    background-color: green;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: Abel;
+    width: 100%;
+    align-self: center;
+
+}
+
+hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}

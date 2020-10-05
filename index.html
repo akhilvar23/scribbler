@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ScriBBler</title>
+
+    <!-- locations of css files -->
+    <link href='styles\index.css' rel='stylesheet' type='text/css'>
+    <link href='styles\common.css' rel='stylesheet' type='text/css'>
+    <link href='styles\createpost.css' rel='stylesheet' type='text/css'>
+
+    <!-- fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Montez|Roboto|Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+          type="text/css" media="screen"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+<!-- TODO: Include all your code for the header and home page here -->
+
+<div id="main-container-div">
+    <!-- code for Sign Up, Sign In button and headers-->
+    <div class="header">
+        <div class="header-container">
+            <p class="main-header">ScriBBler</p>
+            <p class="sub-header">Explore, Imagine, Create</p>
+        </div>
+        <div class="loginButtons">
+            <button onclick="showSignUpModal()" class="login-button" type="button">Sign Up</button>
+            <button onclick="showSignInModal()" class="login-button" type="button">Sign In</button>
+        </div>
+    </div>
+
+    <div class="postButtons">
+        <!-- Insert code for All Posts & Create Post button here -->
+        <button onclick="navigateToBlogList()" class="post-button" type="button">All Posts</button>
+        <button onclick="showCreatePost()" class="post-button" type="button">Create Post</button>
+    </div>
+
+</div>
+
+<!-- Sign Up modal  -->
+<div>
+    <div class="modal" id="signup-modal">
+        <div class="modal-content-signup">
+
+            <div class="modal-head">
+                <h2 class="modal-title">Get Started<span onclick="hideSignUpModal()" id="close"
+                                                         class="close">&times;</span></h2>
+            </div>
+            <hr>
+            <form>
+                <label for="fullname" class="label-text">Name</label>
+                <input type="text" id="inpFullname" placeholder="Enter your name" required>
+                <label for="username" class="label-text">Username</label>
+                <input type="text" id="inpUsername" placeholder="Enter your username" required>
+                <label for="password" class="label-text">Password</label>
+                <input type="password" id="inpPassword" placeholder="Enter your password" required>
+                <label for="confirm_password" class="label-text">Confirm Password</label>
+                <input type="password" id="inpConfirmPassword" placeholder="Re-Enter your password" required>
+                <button type="submit" onclick="signup(firstName,lastName, email, password, mobile)" class="greenButton">
+                    Sign up
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <!--Sign In modal -->
+    <div class="modal" id="signin-modal">
+        <div class="modal-content-signin">
+
+            <div class="modal-head">
+                <h2 class="modal-title">Welcome Back!<span onclick="hideSignInModal()" id="close"
+                                                           class="close">&times;</span></h2>
+            </div>
+            <hr>
+            <form>
+                <label for="username" class="label-text">Username</label>
+                <input type="text" id="inpUsername" placeholder="Enter your username" required>
+                <label for="password" class="label-text">Password</label>
+                <input type="password" id="inpPassword" placeholder="Enter your password" required>
+                <button type="submit" onclick="signin(username, password)" class="greenButton">Sign In</button>
+            </form>
+
+            <div class=bottom-banner>Not a member?<span onclick="hideSignInModal();showSignUpModal()" class=signup>Sign Up</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div>
+    <!-- Create Post modal  -->
+    <div class="modal" id="create-post-modal">
+
+        <div class="modal-content-post">
+
+            <div class="modal-head">
+                <h2 class="modal-title">Pen your post <span onclick="hideCreatePostModal()" id="close" class="close">&times;</span>
+                </h2>
+            </div>
+            <hr>
+            <form id=create-post-form>
+                <label for="title" class="label-text">Title</label>
+                <input type="text" id="inpTitle" placeholder="Enter title for your post" required>
+                <label for="contents" class="label-text">Contents</label>
+                <textarea cols="50" rows="10" id="inpContents" name="post-details" form="create-post-form"></textarea>
+                <button type="submit" onclick="createPost()" class="postbutton">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Javascript files for common and index  -->
+<script src="scripts\common.js"></script>
+<script src="scripts\index.js"></script>
+
+</body>
+
+</html>
